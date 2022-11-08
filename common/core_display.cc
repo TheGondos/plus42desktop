@@ -47,7 +47,7 @@
 #endif
 
 
-static const char bigchars[133][5] =
+static const unsigned char bigchars[133][5] =
     {
         { 0x08, 0x08, 0x2a, 0x08, 0x08 },
         { 0x22, 0x14, 0x08, 0x14, 0x22 },
@@ -184,7 +184,7 @@ static const char bigchars[133][5] =
         { 0x7f, 0x41, 0x22, 0x14, 0x08 }
     };
 
-static const char smallchars[434] =
+static const unsigned char smallchars[434] =
     {
         0x00, 0x00, 0x00,
         0x5c,
@@ -1203,7 +1203,7 @@ void draw_block(int x, int y) {
     mark_dirty(Y, X, Y + 8, X + 5);
 }
 
-const char *get_char(char c) {
+const unsigned char *get_char(char c) {
     unsigned char uc = (unsigned char) c;
     if (uc == 134)
         uc = 132;

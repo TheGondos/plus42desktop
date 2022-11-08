@@ -931,7 +931,7 @@ int string2phloat(const char *buf, int buflen, phloat *d) {
     *d = res;
     return 0;
 }
-
+#if 0
 double decimal2double(void *data, bool pin_magnitude /* = false */) {
     double res;
     BID_UINT128 *b, b2;
@@ -950,7 +950,7 @@ double decimal2double(void *data, bool pin_magnitude /* = false */) {
     int inf = isinf(res);
     return inf == 0 ? res : inf < 0 ? NEG_HUGE_PHLOAT : POS_HUGE_PHLOAT;
 }
-
+#endif
 
 #endif // BCD_MATH
 
